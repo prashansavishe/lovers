@@ -1,0 +1,100 @@
+<html>
+    <head>
+        <title>Hello sweetu😚</title>
+        <style>
+            *{font-size:25px; font-family:Cambria;}
+body{background-color:pink; color:black; width:80%; border-radius:5px;}
+h1{color:rgb(201, 13, 132); font-size:40px}
+
+ </style>
+</head>
+    <body>
+        <center>
+        <h1>Hello sweetu💗</h1>
+        <form onsubmit="show()">
+            <label> Please enter your name</label>
+                <br/>
+            <input type="text"  id="name"  placeholder="enter your name" />
+        <br/><br>
+            <label>Select as many as you want</label>
+                <br/>
+                <input type="checkbox"   id="a" />a
+                <input type="checkbox"   id="b" />b
+                <input type="checkbox"   id="c" />c
+                <input type="checkbox"   id="d" />d
+                <input type="checkbox"   id="e" />e
+                <input type="checkbox"   id="f" />f
+                <input type="checkbox"   id="g" />g
+            
+            
+        <br/><br/>
+        <input type="submit" value="reasons i love you" />
+    </form>
+    <h2 id="msg" />
+    <script>
+        function show()
+        {
+            event.preventDefault();
+            let name= document.getElementById("name")
+            let a= document.getElementById("a");
+            let b= document.getElementById("b");
+            let c= document.getElementById("c");
+            let d= document.getElementById("d");
+            let e= document.getElementById("e");
+            let f= document.getElementById("f");
+            let g= document.getElementById("g");
+            let msg= document.getElementById("msg")
+            if(name.value==="")
+        {
+            alert("name is empty");
+            msg.innerHTML="";
+            name.focus();
+            return;
+        }
+        if(name.value.trim()==="")
+        {
+            alert("name cannot be black spaces");
+            name.value="";
+            msg.innerHTML="";
+            name.focus();
+            return;
+        }
+        if(! name.value.match(/^[A-Za-z  ]+$/))
+        {
+            alert("name should contain only alphabets");
+            name.value="";
+            msg.innerHTML="";
+            name.focus();
+            return;
+        }
+        let lover ="";
+                    if(a.checked)  lover +=" you are a sweetheart🍭♥️, ";
+                   
+                    if(b.checked)  lover +=" i am always at peace when im with you🕊️, ";
+                   
+                    if(c.checked) lover +=" you dont get angry at me even if i annoy u alot😚 , ";
+
+                    if(d.checked) lover +=" you are hot🥵, ";
+
+                    if(e.checked) lover +=" i like the way you touch me😋, ";
+
+                    if(f.checked) lover +=" you talerate my tantrums sometimes😩, ";
+
+
+                    if(g.checked) lover +=" Because you love me....hahaha😂. ";
+
+
+
+                    
+                    
+                    
+                    
+                    let ans= name.value + " I love you because  " +lover;
+                    msg.innerHTML=ans;
+                    
+        }
+      
+    </script>
+      </center>
+           </body>
+</html>
